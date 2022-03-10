@@ -18,7 +18,7 @@ namespace MinecraftRandomizerDatabase
                 Console.WriteLine("*------------------------------------------------------------------------------------------------------*");
                 Console.WriteLine("What block did a grassblock give you? If it didn't give you anything leave it empty!\n");
 
-                Console.WriteLine("All possibilities are: 'blastfurnace', 'crimsonfence', 'lightgreyterracotta', 'dirt', 'acacianfence'.\n");
+                Console.WriteLine("All possibilities are: 'blastfurnace', 'crimsonfence', 'lightgreyterracotta', 'dirt', 'acacianfence', 'acaciansign', 'strippeddarkoak'.\n");
 
                 Console.WriteLine("Remember to write all the words together and in lowercase letters for it to work");
 
@@ -34,6 +34,7 @@ namespace MinecraftRandomizerDatabase
                 string pearls = "";
                 string iron = "";
                 string proChestDrops = "";
+                string netherite = "";
                 #endregion
 
                 #region potion strings
@@ -64,12 +65,13 @@ namespace MinecraftRandomizerDatabase
                     //Sets values for the strings for this exact use case
                     diamond = "";
                     enchant = "";
-                    gApple = "";
+                    gApple = "?tnt";
                     endcity = "daisy";
                     totem = "";
                     pearls = "";
                     iron = "";
                     proChestDrops = "";
+                    netherite = "";
                     #endregion
 
                     #region potion strings
@@ -98,7 +100,7 @@ namespace MinecraftRandomizerDatabase
                 {
                     #region item strings
                     //Sets values for the strings for this exact use case
-                    diamond = "";
+                    diamond = "?gold ore";
                     enchant = "";
                     gApple = "Seagrass";
                     endcity = "";
@@ -106,6 +108,7 @@ namespace MinecraftRandomizerDatabase
                     pearls = "";
                     iron = "";
                     proChestDrops = "Diorite and yellow flowers --> wooden button";
+                    netherite = "";
                     #endregion
 
                     #region potion strings
@@ -142,6 +145,7 @@ namespace MinecraftRandomizerDatabase
                     pearls = "";
                     iron = "";
                     proChestDrops = "";
+                    netherite = "";
                     #endregion
 
                     #region potion strings
@@ -178,6 +182,7 @@ namespace MinecraftRandomizerDatabase
                     pearls = "";
                     iron = "";
                     proChestDrops = "";
+                    netherite = "";
                     #endregion
 
                     #region potion strings
@@ -214,6 +219,7 @@ namespace MinecraftRandomizerDatabase
                     pearls = "";
                     iron = "red mushroom blocks";
                     proChestDrops = "";
+                    netherite = "";
                     #endregion
 
                     #region potion strings
@@ -238,6 +244,76 @@ namespace MinecraftRandomizerDatabase
 
                     PrintInfo();
                 }
+                else if (grassblock == "acaciansign")
+                {
+                    #region item strings
+                    //Sets values for the strings for this exact use case
+                    diamond = "";
+                    enchant = "";
+                    gApple = "dark oak";
+                    endcity = "";
+                    totem = "";
+                    pearls = "";
+                    iron = "";
+                    proChestDrops = "";
+                    netherite = "";
+                    #endregion
+
+                    #region potion strings
+                    brownMushroom = "";
+                    sugar = "";
+                    gunpowder = "";
+                    glowstone = "";
+                    sand = "";
+                    oven = "";
+                    bottle = "";
+                    netherwart = "";
+                    spiderEye = "";
+                    brewingStand = "";
+                    blazeRod = "";
+                    cobblestone = "";
+                    ghastTear = "";
+                    phantomMembrane = "";
+                    rabbitFeet = "";
+                    melon = "";
+                    carrot = "";
+                    #endregion
+                }
+                else if (grassblock == "strippedoakwood")
+                {
+                    #region item strings
+                    //Sets values for the strings for this exact use case
+                    diamond = "stone --> redstone";
+                    enchant = "";
+                    gApple = "";
+                    endcity = "";
+                    totem = "";
+                    pearls = "";
+                    iron = "";
+                    proChestDrops = "";
+                    netherite = "";
+                    #endregion
+
+                    #region potion strings
+                    brownMushroom = "";
+                    sugar = "";
+                    gunpowder = "";
+                    glowstone = "";
+                    sand = "";
+                    oven = "";
+                    bottle = "";
+                    netherwart = "";
+                    spiderEye = "";
+                    brewingStand = "";
+                    blazeRod = "";
+                    cobblestone = "";
+                    ghastTear = "";
+                    phantomMembrane = "";
+                    rabbitFeet = "";
+                    melon = "";
+                    carrot = "";
+                    #endregion
+                }
                 //If grassblock gave you nothing, then check what item dirt gave you
                 if (grassblock == "")
                 {
@@ -259,6 +335,7 @@ namespace MinecraftRandomizerDatabase
                         pearls = "";
                         iron = "";
                         proChestDrops = "";
+                        netherite = "";
                         #endregion
 
                         #region potion strings
@@ -292,6 +369,7 @@ namespace MinecraftRandomizerDatabase
                         pearls = "";
                         iron = "";
                         proChestDrops = "";
+                        netherite = "";
                         #endregion
 
                         #region potion strings
@@ -325,6 +403,7 @@ namespace MinecraftRandomizerDatabase
                         pearls = "";
                         iron = "";
                         proChestDrops = "";
+                        netherite = "";
                         #endregion
 
                         #region potion strings
@@ -358,6 +437,7 @@ namespace MinecraftRandomizerDatabase
                         pearls = "";
                         iron = "";
                         proChestDrops = "";
+                        netherite = "";
                         #endregion
 
                         #region potion strings
@@ -404,6 +484,7 @@ namespace MinecraftRandomizerDatabase
                     if (pearls != "") Console.WriteLine($"You get pearls by breaking {pearls}");
                     if (iron != "") Console.WriteLine($"You get iron by breaking {iron}");
                     if (proChestDrops != "") Console.WriteLine($"You get chest drops by breaking {proChestDrops}");
+                    if (netherite != "") Console.WriteLine($"You get netherite by breaking {netherite}");
                     #endregion
 
                     PrintPotionInfo();
@@ -457,6 +538,11 @@ namespace MinecraftRandomizerDatabase
                     {
                         isRunning = false;
                     }
+                    else if (exit == "exit")
+                    {
+                        isRunning = false;
+                    }
+                    
                 }
 
                 //Empties all the strings for a different use case
